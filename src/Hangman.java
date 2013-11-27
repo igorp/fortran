@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-//Hangman game
+//You try to guess the correct word, either by entering a single letter
+//or the whole word
 public class Hangman {
 
     public static void main(String args[]) {

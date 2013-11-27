@@ -1,6 +1,4 @@
-import java.awt.*;
-
-public class BoxDemo extends Canvas {
+public class BoxDemo {
     public static void main(String[] args) {
         
         for(int i = 0; i < 3; i++) {
@@ -14,7 +12,6 @@ public class BoxDemo extends Canvas {
         }
         else {
             System.out.println("Box is small");
-        }
-        
+        }        
     }
 }
