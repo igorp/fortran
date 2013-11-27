@@ -11,11 +11,8 @@ public class TicTacToe {
 
         int turnCounter = 0;
 
-        //board[0][2] = 1;
-
         drawBoard();
         while (true) {
-
             turnCounter++;
             enterUserInput();
             if (checkWinningConditions(1)) {
@@ -36,10 +33,7 @@ public class TicTacToe {
                 System.out.println("The computer won!");
                 break;
             }
-
             drawBoard();
-            //System.out.println(turnCounter);
-
         }
     }
 
@@ -97,7 +91,7 @@ public class TicTacToe {
             }
         }
     }
-    
+
     public static boolean checkWinningConditions(int player) {
         int rowCounter = 0;
         int columnCounter = 0;
