@@ -97,8 +97,7 @@ public class TicTacToe {
             }
         }
     }
-
-    //*FIX THIS
+    
     public static boolean checkWinningConditions(int player) {
         int rowCounter = 0;
         int columnCounter = 0;
