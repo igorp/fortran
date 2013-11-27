@@ -12,28 +12,31 @@ public class TicTacToe {
         int turnCounter = 0;
 
         //board[0][2] = 1;
-        
+
         drawBoard();
         while (true) {
-            if(checkEndingConditions(turnCounter)) {
-                System.out.println("A");
-                break;
-            }
-            
+
             turnCounter++;
             enterUserInput();
-            if(checkEndingConditions(turnCounter)) {
-                System.out.println("B");
+            if (checkWinningConditions(1)) {
+                drawBoard();
+                System.out.println("You won!");
                 break;
             }
-            
+            if (turnCounter > 8) {
+                drawBoard();
+                System.out.println("It's a draw.");
+                break;
+            }
+
             turnCounter++;
             enterComputerInput();
-            if(checkEndingConditions(turnCounter)) {
-                System.out.println("A");
+            if (checkWinningConditions(2)) {
+                drawBoard();
+                System.out.println("The computer won!");
                 break;
             }
-            
+
             drawBoard();
             //System.out.println(turnCounter);
 
@@ -127,25 +130,6 @@ public class TicTacToe {
             }
         }
         if (diagonalBackCounter == 3 || diagonalForwardCounter == 3) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean checkEndingConditions(int turnCounter) {
-        if (checkWinningConditions(1)) {
-            drawBoard();
-            System.out.println("You won!");
-            return true;
-        }
-        if (checkWinningConditions(2)) {
-            drawBoard();
-            System.out.println("The computer won!");
-            return true;
-        }
-        if (turnCounter > 8) {
-            drawBoard();
-            System.out.println("It's a draw.");
             return true;
         }
         return false;
