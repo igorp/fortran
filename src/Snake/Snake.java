@@ -5,7 +5,6 @@ import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-//import java.awt.image.BufferStrategy;
 
 public class Snake extends javax.swing.JFrame implements KeyListener, Runnable {
 
@@ -19,7 +18,6 @@ public class Snake extends javax.swing.JFrame implements KeyListener, Runnable {
     boolean stopped = false;
     //Instance of logic class
     SnakeLogic snake = new SnakeLogic(length);
-    //private BufferStrategy bufferStrategy;
 
     public Snake() {
         super("Snake");
@@ -63,14 +61,14 @@ public class Snake extends javax.swing.JFrame implements KeyListener, Runnable {
         g.setColor(new Color(34, 139, 34));
         g.fillRect(BLOCK_SIZE * food.getX() + 10, BLOCK_SIZE * food.getY() + 10, BLOCK_SIZE, BLOCK_SIZE);
         g.setColor(Color.BLACK);
-        //powerup
+        //powerup drawn
         if (snake.getPowerUpOnScreen() == true) {
             Point2 powerUp = snake.getPowerUpLocation();
             g.setColor(Color.RED);
             g.fillRect(BLOCK_SIZE * powerUp.getX() + 10, BLOCK_SIZE * powerUp.getY() + 10, BLOCK_SIZE, BLOCK_SIZE);
             g.setColor(Color.BLACK);
         }
-        //score
+        //score drawn
         g.setFont(new Font("LucidaSans", Font.PLAIN, 16));
         g.drawString("Score: " + snake.getScore(), 20, 50);
         g.drawString("Hi-Score: " + hiScore, 20, 70);
@@ -126,14 +124,12 @@ public class Snake extends javax.swing.JFrame implements KeyListener, Runnable {
             } catch (InterruptedException e) {
             }
 
-            //System.out.println(System.currentTimeMillis() - tick);
             snake.updateSnake();
             if (snake.endGame()) {
                 try {
                     t.sleep(2000);
                 } catch (InterruptedException e) {
                 }
-                //System.out.println("Score: " + (snake.getLength()-length));
                 if (snake.getScore() > hiScore) {
                     hiScore = snake.getScore();
                 }

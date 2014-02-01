@@ -4,17 +4,16 @@ import java.awt.*;
 import java.util.Random;
 
 enum Direction {
-
     UP, DOWN, LEFT, RIGHT
 };
 
 public class SnakeLogic {
 
-    public static int period = 300; //60 is pretty good
+    public static int period = 300;
     int snakeLength;
     int score;
     int startLength;
-    final static int powerUpTime = 30;
+    final static int powerUpTime = 60;
     boolean lightsOut;
     int activePowerUpTime;
     Point2[] snakeLocation;
@@ -29,7 +28,6 @@ public class SnakeLogic {
 
     public SnakeLogic(int startLength) {
         init(startLength);
-        System.out.println("hai");
     }
 
     public void init(int length) {
@@ -172,9 +170,7 @@ public class SnakeLogic {
 
     private void checkFood(Point2 point) {
         if (food.getX() == point.getX() && food.getY() == point.getY()) {
-
             score++;
-            //System.out.println(score);
             setPointLocation(food);
             snakeLength += 1;
             snakeLocation[snakeLength - 1] = new Point2();
@@ -188,7 +184,6 @@ public class SnakeLogic {
 
     public boolean checkPowerUp(Point2 point) {
         if (getPowerUpOnScreen()) {
-            //System.out.println("Counter: " + powerUpCounter);
             if (powerUp.getX() == point.getX() && powerUp.getY() == point.getY()) {
                 activatePowerUp();
                 score += 5;
@@ -209,7 +204,7 @@ public class SnakeLogic {
 
     private void activatePowerUp() {
         int randNum = rand.nextInt(3);
-        System.out.println(randNum);
+        
         switch (randNum) {
             case 0:
                 activateReverse();
@@ -234,9 +229,7 @@ public class SnakeLogic {
     private void activateReverse() {
         System.out.println("DIRECTION");
         Point2[] snakeCopy = new Point2[128];
-        //snakeCopy = snakeLocation;
-        //int length = snakeLength - 1;
-
+        
         int tempX;
         int tempY;
         for (int h = 0; h < snakeLength / 2; h++) {
@@ -247,10 +240,7 @@ public class SnakeLogic {
             tempY = snakeLocation[h].getY();
             snakeLocation[h].setY(snakeLocation[snakeLength - h - 1].getY());
             snakeLocation[snakeLength - h - 1].setY(tempY);
-
         }
-        printSnake(snakeLocation);
-
         reverseDirection();
     }
 
@@ -361,9 +351,11 @@ public class SnakeLogic {
     }
 
     //deprecated method for testing
+    /*
     private void printSnake(Point2[] array) {
         for (int j = 0; j < snakeLength; j++) {
             System.out.println("Ar: " + j + " [" + array[j].getX() + "]" + "[" + array[j].getY() + "]");
         }
     }
+    */
 }

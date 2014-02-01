@@ -1,6 +1,5 @@
 package Snake;
 
-
 class Point2 {
 
     private int x;
