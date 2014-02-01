@@ -9,7 +9,7 @@ Rounds proceed as follows. If for example it is your turn to hit, you press on a
 
 Now that there are two cards on the table you can add another one for the computer to beat or press the "End turn" button and let the computer hit a card for you to beat. To add another card to the table the card you select must be of the same value as any of the cards already laying on the table. The computer once again tries to beat the new card. If he doesn't have any cards that correspond he has to pick all the cards on the table, which will result in a new turn for you.
 
-The same round rules apply to you when you are beating cards, that are chosen by the computer. After the deck runs out, you won't pick up anymore cards. The player who get rid of his cards first wins.
+The same round rules apply to you when you are beating cards, that are chosen by the computer. After the deck runs out, you won't pick up anymore cards. The player who gets rid of his cards first wins.
 
 For more information on the game:
 [http://en.wikipedia.org/wiki/Durak](http://en.wikipedia.org/wiki/Durak)
