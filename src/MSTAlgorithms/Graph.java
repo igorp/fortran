@@ -49,8 +49,8 @@ public class Graph {
         StringTokenizer st;
         //Read the text file line by line
         try {
-            //NOTICE: change the string to the correct directory on your system!
-            BufferedReader in = new BufferedReader(new FileReader("C:\\Users\\Igor\\Documents\\NetBeansProjects\\Application\\src\\MinimumSpanningTreeAlgorithms\\input.txt"));
+            //NOTICE: change the string to the correct directory on your system! 
+            BufferedReader in = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\MSTAlgorithms\\input.txt"));
             String str;
             while ((str = in.readLine()) != null) {
                 e++;
