@@ -1,4 +1,4 @@
-random stuff
+small java projects
 ======
 
-A few small projects I've been working on...
+A few small java projects I've been working on...
