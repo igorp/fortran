@@ -1,4 +1,4 @@
-small java projects
+Small programming projects
 ======
 
-A few small Java projects I've been working on...
+A few small projects I've been working on that don't warrant their own repositories.
