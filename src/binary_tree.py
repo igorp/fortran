@@ -256,7 +256,7 @@ class Tree:
                 + formatNodeData(treeFlattened[14]) 
                 + "")
 
-# test out a inserting, deleting and
+# test out a inserting, deleting and printing
 def main():    
     
     tree = Tree()
