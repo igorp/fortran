@@ -1,6 +1,8 @@
 Fortran Notes
 ======
-Fortran is one of the first programming languages ever invented back in 1954 by IBM. Fortran is also faster and more efficient than any other programming language, which makes it well-suited for tasks such as scientific simulations and large-scale numerical modeling. These notes are based on the book *"FORTRAN 77 for Humans"* written by Rex L. Page and Richard L. Didday and published in 1980.
+Fortran is a programming language that was invented back in 1954 by IBM. Fortran is faster and more efficient than any other programming language, making it well-suited for tasks such as scientific simulations and large-scale numerical modeling.
+
+These notes are based on the book *"FORTRAN 77 for Humans"* written by Rex L. Page and Richard L. Didday and published in 1980.
 
 General
 -------
